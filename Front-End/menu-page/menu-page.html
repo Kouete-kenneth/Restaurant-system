@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Food ordering website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='menu-page.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <input type="checkbox" id="cart">
+    <label for="cart" class="label-cart"><span class="fas fa-shopping-cart"></span>check</label>
+    <h3 class="logo">Food delivery Service</h3>
+    <div class="dashboard">
+        <div class="dashboard-banner">
+            <img src="../../images/food1.jpg" alt="dashboard">
+            <div class="banner-promo">
+                <h1><span>50% OFF</span><br>
+                Delicious food <br> Available</h1>
+            </div>
+        </div>
+        <h4 class="dashboard-title">Recomended Foods for you</h4>
+        <div class="dashboard-menu">
+            <a href="#">Favourite</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Near me</a>
+            <a href="#">Promotion</a>
+            <a href="#">Top Rated</a>
+            <a href="#">All</a>
+        </div>
+        <div class="dashboard-content">
+            <div class="dashboard-card">
+                <img src="../../images/spaghetti.jpg" alt="spaghetti">
+                <div class="card-detail">
+                    <h4>Amazing spaghetti <span>$30</span></h4>
+                    <p>well made</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="../../images/cheeseburger.jpg" alt="spaghetti">
+                <div class="card-detail">
+                    <h4>Cheese-Burger <span>$40</span></h4>
+                    <p>Very Nice</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="../../images/eru.jpg" alt="Eru">
+                <div class="card-detail">
+                    <h4>Cameroon Eru <span>$50</span></h4>
+                    <p>Incredibly Nice</p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="../../images/food1.jpg" alt="Food">
+                <div class="card-detail">
+                    <h4>Pizza <span>$45</span></h4>
+                    <p>you will TEstify/p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="../../images/food2.jpg" alt="Food">
+                <div class="card-detail">
+                    <h4>Achou<span>$45</span></h4>
+                    <p>you will TEstify/p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <img src="../../images/cuisine.jpeg" alt="Food">
+                <div class="card-detail">
+                    <h4>Salade <span>$25</span></h4>
+                    <p>you will TEstify/p>
+                    <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ordering dashboard -->
+
+    <div class="dashboard-order">
+        <h4>Order Menu</h4><!--h3-->
+        <div class="order-address">
+         <p>Address delivery</p>
+         <h4>345 malingo street,Buea</h4>
+        </div>
+        <div class="order-time"> 
+             <span class="fas fa-clock"></span>30mins <span class="fas fa-map-marker-alt"></span> 2 km
+        </div>
+        <div class="order-wrapper">
+            <div class="order-card">
+                 <img class="order-image" src="../../images/spaghetti.jpg" alt="Food">
+                 <div class="order detail">
+                     <p>Delicious spaghetti</p>
+                     <i class="fas fa-times"></i><input class="order-input" class="order" type="text" value="1">
+                 </div>
+                 <h4 class="order-price">$25</h4>
+            </div> 
+                <div class="order-card">
+                 <img class="order-image" src="../../images/cheeseburger.jpg" alt="Food">
+                 <div class="order detail">
+                     <p>Delicious cheeseburger</p>
+                     <i class="fas fa-times"></i><input class="order-input" type="text" value="2">
+                 </div>
+                 <h4 class="order-price">$56</h4>
+            </div> 
+            <div class="order-card">
+             <img class="order-image" src="../../images/eru.jpg" alt="Food">
+             <div class="order detail">
+                 <p>Delicious spaghetti</p>
+                 <i class="fas fa-times"></i><input class="order-input" type="text" value="3">
+             </div>
+             <h4 class="order-price">$30</h4>
+        </div> 
+        </div>
+         <hr class="divider">
+         <div class="order-total">
+             <p>Subtotal <span>$200</span></p>
+             <p>Tax(10%) <span>$17.7</span></p>
+             <p>Delivery Fee <span>$13</span></p>
+         
+             <div class="order-promo">
+                 <input class="input-promo" type="text" placeholder="Apply vouvher">
+                 <button class="button-promo">Find promo</button>
+              </div>
+              <hr class="divider">
+              <p>Total <span>$180</span></p>
+         </div>
+         <button class="checkout">Checkout</button>
+     </div>
+</body>

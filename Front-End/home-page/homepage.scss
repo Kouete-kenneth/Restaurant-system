@@ -1,0 +1,242 @@
+    $Purple: #8B1874;
+    $lightPurple: #b71375;
+    $Orange:#fc4f00;
+    $lightOrange:#f79540;
+    $sectionBackground:#615c57;
+    $primary-font:'Alex Brush';
+    $secondary-font:'Lato';
+
+p{
+    font-size: 14px;
+ }
+ *{
+    padding: 0%;
+    margin: 0px ;
+    outline:none;
+    box-sizing: border-box;
+    font-family: $secondary-font;
+ }
+body{
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 2rem;
+        header{
+            background-image: url(../../images/food1.jpg);
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            padding: 0 2rem ;
+            background-color: $lightOrange;
+            height: 8vh;
+            font-weight: 900;
+            div{
+                &:first-child{
+                    font-family: $primary-font;
+                    font-size: 4rem;
+                    color: $lightPurple;
+                }
+                &:last-child{
+                    width: 5%;
+                    ul{
+                        display: flex;
+                        justify-content: space-around;
+                        li{
+                            list-style: none;
+                            &:hover{
+                                color: $Orange;
+                            
+                            }
+                           
+                        }
+                    }
+                }
+            }
+            nav{
+                width: 25%;
+                ul{
+                    display: flex;
+                    justify-content: space-around;
+                    li{
+                        list-style: none;
+
+                    }
+                }
+            }
+           
+        }
+        section{ 
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            height: 88%;
+            overflow: scroll;
+            background-color: $sectionBackground;
+            z-index: 1;
+            background-blend-mode: difference darken;
+            display: flex;
+            #sectionmain
+            {
+                padding: 8px;
+                width: 60%;
+                height: 100%;
+                box-sizing: border-box;
+                border: 2px solid $lightOrange;
+                .slider-container {
+                    width: 100%;
+                    overflow: hidden;
+                    height: 100%;
+                    .slider {
+                        display: flex;
+                        transition: transform 0.5s ease-in-out;
+                        img {
+                          image-resolution: 1024px;
+                          width: 100%;
+                        //   object-fit: contain;
+                        }
+                  }  
+                  .banner-promo{
+                    position: absolute;
+                    top: 10rem;
+                    left: 15%;
+                    font-size: 1em;
+                    text-align: center;
+                    word-wrap: break-word;
+                    p{
+                        color: #f3f0ed;
+
+                    }
+                  }
+                  .navigation {
+                    width: 50%;
+                    display: flex;
+                    justify-content: space-between;
+                    bottom: 5rem;
+                    position: absolute;
+                     z-index:3;
+                    button {
+                      padding: 8px 16px;
+                      margin: 0 5px;
+                      background-color: #333;
+                      color: #fff;
+                      border: none;
+                      cursor: pointer;
+                  
+                      &:hover {
+                        background-color: #555;
+                      }
+                    }
+                  }  
+                 
+                }
+            }
+            
+            #GetTome{
+                    box-sizing: border-box;
+                    position: absolute;
+                    right: 0;
+                    width: 40%;
+                    height: 100%;
+                    padding: 2%;
+                    z-index: 3;
+                    row-gap: 2.5em;
+                    border: 2px solid $Orange;
+                    flex-direction: column;
+                    display: flex;
+                    align-items: center;   
+                    opacity: 0.5;
+                    background-color: $Orange;
+                    h1{
+                        font-family: $primary-font;
+                        font-size: 3em;
+                        color:$lightOrange;
+                    }
+                    form{
+                        width: 100%;
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                             flex-wrap: wrap;
+                             justify-content: space-around;
+                             row-gap: 2rem;
+                             width: 100%;
+                             li{
+                                list-style: none;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                &:first-child{
+                                    column-gap: 2rem;
+                                }
+                                &:nth-child(2){
+                                    column-gap: 0.5rem;
+                                }
+                                &:nth-child(3){
+                                    column-gap: 2.5rem;
+                                }
+                                label{
+                                    color:rgb(31, 2, 18);
+                                    font-weight: 900;
+                                    font-size: large;
+                                }
+                                input,textarea{
+                                    border: none;
+                                    background-color:transparent;
+                                    color:whitesmoke;
+                                    font-size: 1.5em;
+                                    font-family: monospace;
+                                    font-weight: 900;
+                                    border-radius: 5%;
+                                }
+                                input{
+                                    height: 3em;
+                                    width: 60%;
+                                }
+                             }
+                        }
+                    }
+                    .contact{
+                           width: 100%;
+                           display: flex;
+                           flex-direction: column;
+                           justify-content: center;
+                           align-items: center;
+                        span{
+                            font-family: $primary-font;
+                            font-size: 3em;
+                            color:$Orange;
+                            font-weight: 1000;
+                            color:$lightOrange;
+                            bottom: 1px;
+                        }
+                        li{
+                            list-style: none;
+                        }
+                    }
+                }
+            
+
+        }
+        footer{
+            width: 100%;
+            height: 8vh;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+            background-color: $lightPurple;
+            ul{
+                display: flex;
+                justify-content:space-evenly;
+                width: 30%;
+                 li{
+                    list-style: none;
+                 }
+            }
+        }
+
+   }

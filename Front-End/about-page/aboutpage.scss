@@ -1,0 +1,76 @@
+$Purple: #8B1874;
+$lightPurple: #b71375;
+$Orange:#fc4f00;
+$lightOrange:#f79540;
+$sectionBackground:#615c57;
+$primary-font:'Alex Brush';
+$secondary-font:'Lato';
+
+body {
+  font-family: $secondary-font, sans-serif;
+  color: $sectionBackground;
+  background-image: url('../../images/aboutBackground4.jpg');
+  background-size: contain;
+  background-position: center;
+}
+
+header {
+  background-color: $Purple;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-bottom: 2em;
+  h1 {
+    font-family: $primary-font, cursive;
+    font-size: 3em;
+    margin: 0;
+  }
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  section {
+    background-color: white;
+    padding: 2em;
+    margin-bottom: 2em;
+    h2 {
+      font-family: $primary-font, cursive;
+      font-size: 2em;
+      color: $lightPurple;
+      margin-top: 0;
+    }
+    p {
+      line-height: 1.5;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 0.5em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    a {
+      color: $Orange;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    address {
+      font-style: normal;
+      margin: 0;
+    }
+  }
+}
+
+footer {
+  background-color: $sectionBackground;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
