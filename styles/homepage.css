@@ -1,224 +1,196 @@
-p {
-  font-size: 14px;
-}
-
-* {
-  padding: 0%;
-  margin: 0px;
-  outline: none;
-  box-sizing: border-box;
-  font-family: "Lato";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush");
+@import url("https://fonts.googleapis.com/css2?family=Lato");
+:root {
+  --Purple: #8B1874;
+  --lightPurple: #b71375;
+  --Orange: #fc4f00;
+  --lightOrange: #f79540;
+  --sectionBackground: #615c57;
+  --primary-font: Alex Brush, cursive;
+  --secondary-font: Lato, sans-serif;
 }
 
 body {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: var(--primary-font);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--lightOrange);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+header .logo {
+  font-family: var(--primary-font);
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--Purple);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+header nav ul li a:hover {
+  color: var(--Purple);
+}
+@media only screen and (max-width: 768px) {
+  header .logo {
+    font-size: 24px;
+  }
+  header nav ul {
+    margin-right: 0;
+  }
+  header nav ul li {
+    margin-left: 10px;
+  }
+  header nav ul li a {
+    font-size: 14px;
+  }
+}
+
+section {
+  padding: 20px 0;
+  background-color: var(--sectionBackground);
+}
+section .slider-container {
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+section .slider-container .slider {
+  display: flex;
+  position: relative;
+}
+section .slider-container .slider img {
   width: 100%;
   height: auto;
-  position: relative;
-  padding-bottom: 2rem;
+  transition: all 0.3s ease;
+  align-self: center;
 }
-body header {
-  background-image: url(../../images/food1.jpg);
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  background-color: #f79540;
-  height: 8vh;
-  font-weight: 900;
-}
-body header div:first-child {
-  font-family: "Alex Brush";
-  font-size: 4rem;
-  color: #b71375;
-}
-body header div:last-child {
-  width: 5%;
-}
-body header div:last-child ul {
-  display: flex;
-  justify-content: space-around;
-}
-body header div:last-child ul li {
-  list-style: none;
-}
-body header div:last-child ul li:hover {
-  color: #fc4f00;
-}
-body header nav {
-  width: 25%;
-}
-body header nav ul {
-  display: flex;
-  justify-content: space-around;
-}
-body header nav ul li {
-  list-style: none;
-}
-body section {
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  height: 88%;
-  overflow: scroll;
-  background-color: #615c57;
-  z-index: 1;
-  background-blend-mode: difference darken;
-  display: flex;
-}
-body section #sectionmain {
-  padding: 8px;
-  width: 60%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 2px solid #f79540;
-}
-body section #sectionmain .slider-container {
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-}
-body section #sectionmain .slider-container .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-body section #sectionmain .slider-container .slider img {
-  image-resolution: 1024px;
-  width: 100%;
-}
-body section #sectionmain .slider-container .banner-promo {
+section .slider-container .banner-promo {
   position: absolute;
-  top: 10rem;
-  left: 15%;
-  font-size: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  word-wrap: break-word;
+  color: #fff;
 }
-body section #sectionmain .slider-container .banner-promo p {
-  color: #f3f0ed;
+section .slider-container .banner-promo h1 {
+  font-family: --primary-font;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--lightOrange);
 }
-body section #sectionmain .slider-container .navigation {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  bottom: 5rem;
+section .slider-container .banner-promo h1 span {
+  font-size: 48px;
+  color: var(--Purple);
+}
+section .slider-container .banner-promo p {
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+section .slider-container .navigation {
   position: absolute;
-  z-index: 3;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-body section #sectionmain .slider-container .navigation button {
-  padding: 8px 16px;
-  margin: 0 5px;
-  background-color: #333;
+section .slider-container .navigation button {
+  background-color: var(--Purple);
   color: #fff;
   border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-body section #sectionmain .slider-container .navigation button:hover {
-  background-color: #555;
+section .slider-container .navigation button:hover {
+  background-color: var(--lightPurple);
+  color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
-body section #GetTome {
-  box-sizing: border-box;
-  position: absolute;
-  right: 0;
-  width: 40%;
-  height: 100%;
-  padding: 2%;
-  z-index: 3;
-  row-gap: 2.5em;
-  border: 2px solid #fc4f00;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  opacity: 0.5;
-  background-color: #fc4f00;
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
-body section #GetTome h1 {
-  font-family: "Alex Brush";
-  font-size: 3em;
-  color: #f79540;
+.contact-form h1 {
+  margin-bottom: 20px;
+  font-family: var(--primary-font);
+  font-size: 36px;
+  color: var(--lightOrange);
 }
-body section #GetTome form {
-  width: 100%;
-}
-body section #GetTome form ul {
+.contact-form form {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  row-gap: 2rem;
-  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
-body section #GetTome form ul li {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.contact-form form label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--Purple);
 }
-body section #GetTome form ul li:first-child {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-body section #GetTome form ul li:nth-child(2) {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-}
-body section #GetTome form ul li:nth-child(3) {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
-}
-body section #GetTome form ul li label {
-  color: rgb(31, 2, 18);
-  font-weight: 900;
-  font-size: large;
-}
-body section #GetTome form ul li input, body section #GetTome form ul li textarea {
+.contact-form form input,
+.contact-form form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
   border: none;
-  background-color: transparent;
-  color: whitesmoke;
-  font-size: 1.5em;
-  font-family: monospace;
-  font-weight: 900;
-  border-radius: 5%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
-body section #GetTome form ul li input {
-  height: 3em;
-  width: 60%;
+.contact-form form textarea {
+  height: 150px;
 }
-body section #GetTome .contact {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.contact-form form button {
+  background-color: var(--lightOrange);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-body section #GetTome .contact span {
-  font-family: "Alex Brush";
-  font-size: 3em;
-  color: #fc4f00;
-  font-weight: 1000;
-  color: #f79540;
-  bottom: 1px;
+.contact-form form button:hover {
+  background-color: var(--Orange);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
-body section #GetTome .contact li {
-  list-style: none;
-}
-body footer {
-  width: 100%;
-  height: 8vh;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3rem;
-  background-color: #b71375;
-}
-body footer ul {
-  display: flex;
-  justify-content: space-evenly;
-  width: 30%;
-}
-body footer ul li {
+.contact-form .contact-info li {
   list-style: none;
 }/*# sourceMappingURL=homepage.css.map */
