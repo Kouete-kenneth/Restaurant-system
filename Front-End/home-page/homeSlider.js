@@ -21,5 +21,5 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("prevBtn").addEventListener("click", prevSlide);
     document.getElementById("nextBtn").addEventListener("click", nextSlide);
   
-    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    setInterval(nextSlide, 15000); // Change slide every 5 seconds
   });
